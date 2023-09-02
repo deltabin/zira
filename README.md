@@ -1,2 +1,2 @@
 # Zira
-<b><a href="deltabin-zira.vercel.app" target="_blank">Web Preview</a></b>
+<b><a href="https://deltabin-zira.vercel.app/" target="_blank">Web Preview</a></b>
