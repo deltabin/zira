@@ -1,0 +1,7 @@
+.menu {
+	@apply flex flex-col;
+
+	.screen {
+		@apply flex gap-4;
+	}
+}

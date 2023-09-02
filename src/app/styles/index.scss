@@ -1,0 +1,10 @@
+@import 'fonts';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-[#16181B] text-white;
+	}
+}

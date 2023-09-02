@@ -1,0 +1,35 @@
+.home {
+	@apply flex mt-9 h-[576px];
+
+	.info {
+		@apply gap-12 flex items-start  flex-col place-content-center ml-14;
+
+		> p {
+			@apply font-bold text-5xl w-7/12;
+		}
+
+		.menu {
+			@apply text-[#FF9100] flex items-center gap-6;
+
+			> div {
+				@apply border-b-2 border-[#FF9100] w-24;
+			}
+		}
+
+		.promo {
+			@apply bg-[#FF9100] gap-3 flex items-center text-[#1F2125] py-5 px-12 rounded-3xl cursor-pointer;
+
+			> span {
+				@apply font-bold;
+			}
+		}
+	}
+
+	.images {
+		@apply flex gap-6 overflow-hidden;
+
+		img:first-of-type {
+			background-image: linear-gradient(270deg, #16181b 0%, rgba(22, 24, 27, 0) 100%);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.item {
+	@apply flex items-center justify-between;
+
+	> div {
+		@apply flex items-center;
+
+		> img {
+			@apply w-32;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.sort {
+	@apply relative;
+
+	&__label {
+		@apply flex items-center;
+		svg {
+			@apply mr-2;
+		}
+
+		b {
+			@apply mr-2;
+		}
+
+		span {
+			@apply text-orange-400 border-b border-dashed border-orange-400 cursor-pointer;
+		}
+	}
+
+	&__popup {
+		@apply absolute right-0 mt-4 backdrop-blur rounded-xl overflow-hidden p-[10px_0] bg-[rgba(0,_0,_0,_0.3)] shadow-[0px_5px_15px_rgba(0,_0,_0,_1)];
+		ul {
+			@apply overflow-hidden;
+			li {
+				@apply p-[12px_20px] cursor-pointer;
+
+				&.active,
+				&:hover {
+					@apply bg-[rgba(254,_95,_30,_0.05)];
+				}
+
+				&.active {
+					@apply font-bold text-orange-400;
+				}
+			}
+		}
+	}
+}
