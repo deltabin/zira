@@ -7,4 +7,8 @@
 	body {
 		@apply bg-[#16181B] text-white;
 	}
+
+	.toast {
+		@apply rounded-xl bg-[#1F2125] text-[#7A7F84];
+	}
 }
