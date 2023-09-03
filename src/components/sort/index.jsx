@@ -15,7 +15,6 @@ export function Sort({ value }) {
 		dispatch(setSort(obj));
 		setOpen(false);
 	};
-	console.log(styles);
 
 	return (
 		<div className={styles.sortWrapper}>
