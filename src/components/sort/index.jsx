@@ -54,7 +54,7 @@ export function Sort({ value }) {
 								<li
 									key={i}
 									onClick={() => onClickListItem(obj)}
-									className={value.sortProperty === obj.sortProperty ? 'active' : ''}
+									className={value.sortProperty === obj.sortProperty ? styles.active : ''}
 								>
 									{obj.name}
 								</li>
