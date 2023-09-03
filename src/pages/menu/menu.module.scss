@@ -4,4 +4,8 @@
 	.screen {
 		@apply flex gap-4;
 	}
+
+	.menuItemWrapper {
+		@apply flex gap-4 flex-col w-full mr-14;
+	}
 }

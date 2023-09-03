@@ -31,7 +31,7 @@ export const Menu = () => {
 			<Sort value={sort} />
 			<div className={styles.screen}>
 				<Category value={categoryId} onChangeCategory={onChangeCategory} />
-				<div className="flex gap-4 flex-col w-full mr-14">
+				<div className={styles.menuItemWrapper}>
 					{isFetching ? (
 						skeletons
 					) : data ? (

@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { CSSTransition } from 'react-transition-group';
 import { setSort } from '../../store/filter/slice';
 import { sortList } from './data';
 import styles from './sort.module.scss';
@@ -8,16 +9,18 @@ export function Sort({ value }) {
 	const sortRef = useRef();
 	const [open, setOpen] = useState(false);
 	const dispatch = useDispatch();
+	const nodeRef = useRef(null);
 
 	const onClickListItem = (obj) => {
 		dispatch(setSort(obj));
 		setOpen(false);
 	};
+	console.log(styles);
 
 	return (
-		<div className="flex justify-end mx-14 my-4">
+		<div className={styles.sortWrapper}>
 			<div ref={sortRef} className={styles.sort}>
-				<div className={styles.sort__label}>
+				<div className={styles.sortLabel}>
 					<svg
 						width="10"
 						height="6"
@@ -33,8 +36,19 @@ export function Sort({ value }) {
 					<b>Сортировка по:</b>
 					<span onClick={() => setOpen(!open)}>{value.name}</span>
 				</div>
-				{open && (
-					<div className={styles.sort__popup}>
+				<CSSTransition
+					nodeRef={nodeRef}
+					in={open}
+					timeout={300}
+					classNames={{
+						enter: styles.sortPopupEnter,
+						enterActive: styles.sortPopupEnterActive,
+						exit: styles.sortPopupExit,
+						exitActive: styles.sortPopupExitActive,
+					}}
+					unmountOnExit
+				>
+					<div ref={nodeRef} className={styles.sortPopup}>
 						<ul>
 							{sortList.map((obj, i) => (
 								<li
@@ -47,7 +61,7 @@ export function Sort({ value }) {
 							))}
 						</ul>
 					</div>
-				)}
+				</CSSTransition>
 			</div>
 		</div>
 		// <div className={styles.sort}>
