@@ -63,17 +63,5 @@ export function Sort({ value }) {
 				</CSSTransition>
 			</div>
 		</div>
-		// <div className={styles.sort}>
-		// 	<div className={styles.sortLeft}>
-		// 		<div className={styles.sortValue}>
-		// 			<span>Сортировка: </span>
-		// 			<span>По умолчанию</span>
-		// 		</div>
-		// 	</div>
-		// 	<div className={styles.sortRight}>
-		// 		<MdViewModule size={24} className="text-orange-400" />
-		// 		<MdViewList size={24} />
-		// 	</div>
-		// </div>
 	);
 }
