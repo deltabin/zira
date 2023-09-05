@@ -4,6 +4,7 @@ import { Layout } from '../components/layout/Layout';
 import { About } from '../pages/about';
 import { Home } from '../pages/home';
 import { Menu } from '../pages/menu';
+import { CreateProducts } from '../pages/createProducts/index.jsx';
 
 export const router = createBrowserRouter([
 	{
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
 			{
 				path: 'product/:id',
 				element: <Test />,
+			},
+			{
+				path: 'add',
+				element: <CreateProducts />,
 			},
 		],
 	},

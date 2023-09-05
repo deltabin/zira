@@ -1,0 +1,32 @@
+.createWrapper {
+	@apply max-w-lg mx-auto;
+
+	.createForm {
+		@apply flex flex-col gap-4 justify-center;
+
+		> label {
+			@apply flex flex-col;
+
+			> input,
+			textarea {
+				@apply bg-neutral-800 rounded outline-0;
+			}
+		}
+
+		.createButtons {
+			@apply flex justify-around;
+
+			button {
+				@apply px-4 py-2 rounded;
+			}
+
+			> button {
+				@apply bg-orange-400;
+			}
+
+			> a > button {
+				@apply bg-red-500;
+			}
+		}
+	}
+}
