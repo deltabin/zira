@@ -1,7 +1,7 @@
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
-import { NavItem } from './Header.data';
 import styles from './Header.module.scss';
+import { NavItem } from './data.js';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
 
