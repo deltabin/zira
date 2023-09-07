@@ -1,11 +1,12 @@
-import { FaSearch, FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import { NavItem } from './data.js';
+import { Search } from './search';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
 
-export default function Header() {
+export function Header() {
 	return (
 		<header className={styles.header}>
 			<Link to="/">
@@ -20,10 +21,7 @@ export default function Header() {
 			</nav>
 			<div className={styles.right}>
 				{/* Поиск */}
-				<div className={styles.search}>
-					<input type="text" />
-					<FaSearch />
-				</div>
+				<Search />
 				{/* Корзина */}
 				<div className={styles.cart}>
 					<span>Корзина</span>

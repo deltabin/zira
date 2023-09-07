@@ -2,17 +2,17 @@ import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Category, MenuItem, Skeleton, Sort } from '../../components';
 import { useGetProductsQuery } from '../../store/api';
-import { selectCategoryId, selectSort } from '../../store/filter/selectors';
+import { selectFilter } from '../../store/filter/selectors';
 import { setCategoryId } from '../../store/filter/slice';
 import styles from './menu.module.scss';
 
 export const Menu = () => {
-	const categoryId = useSelector(selectCategoryId);
-	const sort = useSelector(selectSort);
+	const { categoryId, sort, searchValue } = useSelector(selectFilter);
+	const search = searchValue;
 	const category = categoryId > 0 ? String(categoryId) : '';
 	const sortBy = sort.sortProperty.replace('-', '');
 	const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
-	const { data, isFetching } = useGetProductsQuery({ category, sortBy, order });
+	const { data, isFetching } = useGetProductsQuery({ category, sortBy, order, search });
 	const dispatch = useDispatch();
 	const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
 

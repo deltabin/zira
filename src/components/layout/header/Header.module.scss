@@ -1,43 +1,27 @@
 .header {
-  @apply flex justify-between items-center px-14 py-6;
+	@apply flex justify-between items-center px-14 py-6;
 
-  > img {
-    @apply object-contain
-  }
+	> img {
+		@apply object-contain;
+	}
 }
 
 .nav {
-  @apply flex gap-4 text-base text-[#73777D];
+	@apply flex gap-4 text-base text-[#73777D];
 
-  .active {
-    @apply text-orange-400 font-bold;
-  }
+	.active {
+		@apply text-orange-400 font-bold;
+	}
 }
 
 .right {
-  @apply flex items-center gap-10;
+	@apply flex items-center gap-10;
 
-  .search {
-    @apply flex items-center gap-2;
+	.cart {
+		@apply flex items-center font-medium text-base cursor-pointer gap-2 text-[#73777D];
 
-    > input {
-      @apply border-b text-[#73777D] border-[#36393E] w-48 bg-transparent outline-none;
-    }
-
-    > svg {
-      @apply text-orange-400 cursor-pointer
-    }
-  }
-
-  .cart {
-    @apply flex items-center font-medium text-base cursor-pointer gap-2 text-[#73777D];
-
-    > span:last-of-type {
-      @apply text-orange-400;
-    }
-  }
+		> span:last-of-type {
+			@apply text-orange-400;
+		}
+	}
 }
-
-
-
-

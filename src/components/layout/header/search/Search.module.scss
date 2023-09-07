@@ -1,0 +1,15 @@
+.search {
+	@apply flex items-center gap-2;
+
+	> input {
+		@apply border-b text-[#73777D] border-[#36393E] w-48 bg-transparent outline-none;
+
+		&::placeholder {
+			@apply text-[#73777D];
+		}
+	}
+
+	> svg {
+		@apply text-orange-400 cursor-pointer;
+	}
+}
