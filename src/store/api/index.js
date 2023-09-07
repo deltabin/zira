@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const API_URL = 'https://64ec685df9b2b70f2bfa4221.mockapi.io';
+const API_URL = 'https://64ec685df9b2b70f2bfa4221.mockapi.io/products';
 
 export const api = createApi({
 	reducerPath: 'api',
@@ -11,14 +11,22 @@ export const api = createApi({
 	endpoints: (builder) => ({
 		getProducts: builder.query({
 			query: ({ category, sortBy, order }) =>
-				`/products/?category=${category}&sortBy=${sortBy}&order=${order}`,
+				`/?category=${category}&sortBy=${sortBy}&order=${order}`,
 			providesTags: () => [
 				{
 					type: 'Products',
 				},
 			],
 		}),
+		createProducts: builder.mutation({
+			query: (product) => ({
+				body: product,
+				url: '/',
+				method: 'POST',
+			}),
+			invalidatesTags: () => [{ type: 'Products' }],
+		}),
 	}),
 });
 
-export const { useGetProductsQuery } = api;
+export const { useGetProductsQuery, useCreateProductsMutation } = api;

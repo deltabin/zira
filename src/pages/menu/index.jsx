@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Category, MenuItem, Skeleton, Sort } from '../../components';
-import { useGetProductsQuery } from '../../store/api/getProducts';
+import { useGetProductsQuery } from '../../store/api';
 import { selectCategoryId, selectSort } from '../../store/filter/selectors';
 import { setCategoryId } from '../../store/filter/slice';
 import styles from './menu.module.scss';

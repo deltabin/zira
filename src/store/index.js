@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { api } from './api/getProducts';
+import { api } from './api';
 import filter from './filter/slice';
 
 const reducers = combineReducers({
