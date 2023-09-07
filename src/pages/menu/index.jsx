@@ -1,9 +1,6 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Category } from '../../components/category';
-import { MenuItem } from '../../components/menu-item';
-import { Skeleton } from '../../components/menu-item/skeleton';
-import { Sort } from '../../components/sort';
+import { Category, MenuItem, Skeleton, Sort } from '../../components';
 import { useGetProductsQuery } from '../../store/api/getProducts';
 import { selectCategoryId, selectSort } from '../../store/filter/selectors';
 import { setCategoryId } from '../../store/filter/slice';
