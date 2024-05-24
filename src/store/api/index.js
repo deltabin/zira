@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import pickBy from 'lodash/pickBy';
 
-const API_URL = 'https://64ec685df9b2b70f2bfa4221.mockapi.io/products';
+const API_URL = 'https://66504877ec9b4a4a60317110.mockapi.io/products';
 
 export const api = createApi({
 	reducerPath: 'api',

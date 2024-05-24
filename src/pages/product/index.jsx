@@ -1,5 +1,5 @@
-import { toast } from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'sonner';
 import { useDeleteProductMutation } from '../../store/api';
 
 export function Product() {

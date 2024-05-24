@@ -8,10 +8,14 @@ import styles from './Search.module.scss';
 export function Search() {
 	const dispatch = useDispatch();
 	const [value, setValue] = useState('');
+	const [lastSentValue, setLastSentValue] = useState('');
 
 	const updateSearchValue = debounce((str) => {
-		dispatch(setSearchValue(str));
-	}, 150);
+		if (str !== lastSentValue) {
+			dispatch(setSearchValue(str));
+			setLastSentValue(str);
+		}
+	}, 1000);
 
 	const onChangeInput = (event) => {
 		setValue(event.target.value);

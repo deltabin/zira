@@ -1,6 +1,6 @@
-import { toast } from 'react-hot-toast';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { toast } from 'sonner';
 import styles from './menu-item.module.scss';
 
 export function MenuItem({ products }) {
